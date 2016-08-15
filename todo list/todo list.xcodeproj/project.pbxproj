@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15AA24FA1D61A55700EC03FB /* CXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA24F91D61A55700EC03FB /* CXLoginViewController.m */; };
 		15CE2E671D5B28670002C61A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E661D5B28670002C61A /* main.m */; };
 		15CE2E6A1D5B28670002C61A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E691D5B28670002C61A /* AppDelegate.m */; };
 		15CE2E6D1D5B28670002C61A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E6C1D5B28670002C61A /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15AA24F81D61A55700EC03FB /* CXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLoginViewController.h; sourceTree = "<group>"; };
+		15AA24F91D61A55700EC03FB /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginViewController.m; sourceTree = "<group>"; };
 		15CE2E621D5B28670002C61A /* todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CE2E661D5B28670002C61A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15CE2E681D5B28670002C61A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 		15CE2E981D5B28BF0002C61A /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				15AA24F81D61A55700EC03FB /* CXLoginViewController.h */,
+				15AA24F91D61A55700EC03FB /* CXLoginViewController.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		15CE2E5A1D5B28670002C61A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CX;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = chenxi;
 				TargetAttributes = {
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15CE2E6D1D5B28670002C61A /* ViewController.m in Sources */,
+				15AA24FA1D61A55700EC03FB /* CXLoginViewController.m in Sources */,
 				15CE2E6A1D5B28670002C61A /* AppDelegate.m in Sources */,
 				15CE2E671D5B28670002C61A /* main.m in Sources */,
 			);
@@ -509,6 +516,7 @@
 				15CE2E911D5B28670002C61A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15CE2E921D5B28670002C61A /* Build configuration list for PBXNativeTarget "todo listTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +525,7 @@
 				15CE2E941D5B28670002C61A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15CE2E951D5B28670002C61A /* Build configuration list for PBXNativeTarget "todo listUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +534,7 @@
 				15CE2E971D5B28670002C61A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
