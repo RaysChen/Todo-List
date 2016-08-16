@@ -34,10 +34,18 @@
 - (void)textChange{
     
     _loginBtn.enabled = _accountField.text.length &&_pwdField.text.length;
-    NSLog(@"%@--%@",_accountField.text,_pwdField.text);
+    //NSLog(@"%@--%@",_accountField.text,_pwdField.text);
     
 }
 
+//在执行跳转之前调用（传值：顺传）
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    UIViewController *vc = segue.destinationViewController;
+    vc.title = [NSString stringWithFormat:@"%@'s TodoList",_accountField.text];
+
+
+}
 
 //点击登录按钮时调用
 //账号cx密码123

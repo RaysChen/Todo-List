@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhB-c6-UnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5344.5" y="-490.5"/>
+            <point key="canvasLocation" x="-5700.5" y="-466.5"/>
         </scene>
         <!--Just Do It -->
         <scene sceneID="lEZ-mN-NQO">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yk-nP-BLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4904.5" y="-490.5"/>
+            <point key="canvasLocation" x="-5240.5" y="-466.5"/>
         </scene>
         <!--My Todo List-->
         <scene sceneID="Vxw-5j-Oxn">
@@ -181,13 +181,64 @@
                                 <action selector="logout:" destination="gbl-Ob-tW7" id="yJW-46-eHW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="添加" id="LoN-oz-PXY"/>
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="LoN-oz-PXY">
+                            <connections>
+                                <segue destination="jo5-Iz-g5c" kind="push" id="e45-Oe-GzK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vZ-Wa-Pnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4452.5" y="-490.5"/>
+            <point key="canvasLocation" x="-4796.5" y="-458.5"/>
+        </scene>
+        <!--Add Something-->
+        <scene sceneID="nOF-SA-Yda">
+            <objects>
+                <viewController id="jo5-Iz-g5c" customClass="CXAddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aDX-c0-7wb"/>
+                        <viewControllerLayoutGuide type="bottom" id="p7r-cL-cw9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ULN-ib-bJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWy-da-Ibl">
+                                <rect key="frame" x="165" y="161" width="53" height="30"/>
+                                <state key="normal" title="add"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add something" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BC1-v8-yvC">
+                                <rect key="frame" x="20" y="83" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aQE-t1-1dX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BWy-da-Ibl" secondAttribute="trailing" constant="157" id="3qF-f7-o05"/>
+                            <constraint firstAttribute="trailing" secondItem="BC1-v8-yvC" secondAttribute="trailing" constant="20" id="7db-Qh-6vI"/>
+                            <constraint firstItem="BC1-v8-yvC" firstAttribute="top" secondItem="aDX-c0-7wb" secondAttribute="bottom" constant="19" id="JoC-xe-ikr"/>
+                            <constraint firstItem="BC1-v8-yvC" firstAttribute="leading" secondItem="ULN-ib-bJ5" secondAttribute="leading" constant="20" id="Qk4-ln-yyI"/>
+                            <constraint firstItem="BWy-da-Ibl" firstAttribute="top" secondItem="BC1-v8-yvC" secondAttribute="bottom" constant="38" id="cyc-Sh-e47"/>
+                            <constraint firstItem="BWy-da-Ibl" firstAttribute="leading" secondItem="ULN-ib-bJ5" secondAttribute="leading" constant="165" id="n6M-Tc-upH"/>
+                            <constraint firstItem="p7r-cL-cw9" firstAttribute="top" secondItem="BWy-da-Ibl" secondAttribute="bottom" constant="476" id="zoW-2a-A3g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Something" id="OmT-q9-aLd" userLabel="Just Do It"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addBtn" destination="BWy-da-Ibl" id="AXp-ry-Xvv"/>
+                        <outlet property="addSthField" destination="BC1-v8-yvC" id="bOC-Ls-0Ie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieg-g8-ivl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4336.5" y="-466.5"/>
         </scene>
     </scenes>
 </document>
