@@ -7,6 +7,8 @@
 //
 
 #import "CXAddViewController.h"
+#import  "CXTodolist.h"
+#import  "CXTodolistViewController.h"
 
 @interface CXAddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *addSthField;
@@ -16,6 +18,19 @@
 
 @implementation CXAddViewController
 
+
+//点击添加的时候调用
+- (IBAction)add:(id)sender {
+    
+    //0.把文本框的内容包装成Todolist模型
+    CXTodolist *todo = [CXTodolist todolistWithsomething:_addSthField.text];
+    
+    //1.把todolist传递给控制器
+    _todoVC.todolist = todo;
+    
+    //2.回到todolist控制器
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

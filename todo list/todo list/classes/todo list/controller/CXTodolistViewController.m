@@ -7,12 +7,29 @@
 //
 
 #import "CXTodolistViewController.h"
+#import "CXAddViewController.h"
+#import "CXTodolist.h"
 
 @interface CXTodolistViewController ()<UIActionSheetDelegate>
 
 @end
 
 @implementation CXTodolistViewController
+
+- (void)setTodolist:(CXTodolist *)todolist{
+
+    _todolist = todolist;
+}
+
+//跳转之前的时候调用
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    //给添加控制器传递todolist控制器的属性
+    CXTodolistViewController *addVC = segue.destinationViewController;
+   
+    addVC.todoVC = self;
+    
+}
 
 
 //点击注销按钮时调用

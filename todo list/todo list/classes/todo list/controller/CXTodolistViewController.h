@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CXTodolist;
 @interface CXTodolistViewController : UITableViewController
 
+@property (nonatomic, strong) CXTodolist *todolist;
+//@property (nonatomic,strong)CXTodolistViewController *todoVC;
 @end

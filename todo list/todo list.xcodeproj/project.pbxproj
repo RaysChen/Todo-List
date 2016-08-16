@@ -15,6 +15,7 @@
 		15AA252D1D6307E300EC03FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA25221D6307E300EC03FB /* AppDelegate.m */; };
 		15AA252E1D6307E300EC03FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA25231D6307E300EC03FB /* main.m */; };
 		15AA252F1D6307E300EC03FB /* CXTodolistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA25271D6307E300EC03FB /* CXTodolistViewController.m */; };
+		15AA25331D6310C200EC03FB /* CXTodolist.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA25321D6310C200EC03FB /* CXTodolist.m */; };
 		15CE2E6D1D5B28670002C61A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E6C1D5B28670002C61A /* ViewController.m */; };
 		15CE2E701D5B28670002C61A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15CE2E6E1D5B28670002C61A /* Main.storyboard */; };
 		15CE2E721D5B28670002C61A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CE2E711D5B28670002C61A /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		15AA25231D6307E300EC03FB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15AA25261D6307E300EC03FB /* CXTodolistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTodolistViewController.h; sourceTree = "<group>"; };
 		15AA25271D6307E300EC03FB /* CXTodolistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTodolistViewController.m; sourceTree = "<group>"; };
+		15AA25311D6310C200EC03FB /* CXTodolist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTodolist.h; sourceTree = "<group>"; };
+		15AA25321D6310C200EC03FB /* CXTodolist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTodolist.m; sourceTree = "<group>"; };
 		15CE2E621D5B28670002C61A /* todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CE2E6B1D5B28670002C61A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		15CE2E6C1D5B28670002C61A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 		15AA25291D6307E300EC03FB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				15AA25311D6310C200EC03FB /* CXTodolist.h */,
+				15AA25321D6310C200EC03FB /* CXTodolist.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 			files = (
 				15CE2E6D1D5B28670002C61A /* ViewController.m in Sources */,
 				15AA252F1D6307E300EC03FB /* CXTodolistViewController.m in Sources */,
+				15AA25331D6310C200EC03FB /* CXTodolist.m in Sources */,
 				15AA25031D61D1E700EC03FB /* MBProgressHUD.m in Sources */,
 				15AA252D1D6307E300EC03FB /* AppDelegate.m in Sources */,
 				15AA25011D61D1E700EC03FB /* MBProgressHUD+XMG.m in Sources */,

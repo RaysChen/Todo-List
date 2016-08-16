@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class CXTodolistViewController;
+
 @interface CXAddViewController : UIViewController
+
+@property (nonatomic,strong) CXTodolistViewController *todoVC;
 
 @end
