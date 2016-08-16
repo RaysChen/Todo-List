@@ -20,6 +20,25 @@
 
 @implementation CXLoginViewController
 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+//给文本框添加监听器，监听文本框输入内容的及时改变
+    [_accountField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+    [_pwdField addTarget:self action:@selector(textChange)forControlEvents:UIControlEventEditingChanged];
+    
+    
+}
+
+- (void)textChange{
+    
+    _loginBtn.enabled = _accountField.text.length &&_pwdField.text.length;
+    NSLog(@"%@--%@",_accountField.text,_pwdField.text);
+    
+}
+
+
 //点击登录按钮时调用
 //账号cx密码123
 - (IBAction)login:(id)sender {
@@ -64,21 +83,5 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    //给文本框添加监听器，监听文本框输入内容的及时改变
-    [_accountField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
-    [_pwdField addTarget:self action:@selector(textChange)forControlEvents:UIControlEventEditingChanged];
-    
-    
-}
-
-- (void)textChange{
-
-    _loginBtn.enabled = _accountField.text.length &&_pwdField.text.length;
-    NSLog(@"%@--%@",_accountField.text,_pwdField.text);
-
-}
 
 @end

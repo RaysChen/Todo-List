@@ -11,6 +11,7 @@
 		15AA25011D61D1E700EC03FB /* MBProgressHUD+XMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA24FD1D61D1E700EC03FB /* MBProgressHUD+XMG.m */; };
 		15AA25021D61D1E700EC03FB /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15AA24FE1D61D1E700EC03FB /* MBProgressHUD.bundle */; };
 		15AA25031D61D1E700EC03FB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA25001D61D1E700EC03FB /* MBProgressHUD.m */; };
+		15AA25061D62AE0400EC03FB /* CXTodolistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA25051D62AE0400EC03FB /* CXTodolistViewController.m */; };
 		15CE2E671D5B28670002C61A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E661D5B28670002C61A /* main.m */; };
 		15CE2E6A1D5B28670002C61A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E691D5B28670002C61A /* AppDelegate.m */; };
 		15CE2E6D1D5B28670002C61A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CE2E6C1D5B28670002C61A /* ViewController.m */; };
@@ -46,6 +47,8 @@
 		15AA24FE1D61D1E700EC03FB /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		15AA24FF1D61D1E700EC03FB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		15AA25001D61D1E700EC03FB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		15AA25041D62AE0400EC03FB /* CXTodolistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTodolistViewController.h; sourceTree = "<group>"; };
+		15AA25051D62AE0400EC03FB /* CXTodolistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTodolistViewController.m; sourceTree = "<group>"; };
 		15CE2E621D5B28670002C61A /* todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CE2E661D5B28670002C61A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15CE2E681D5B28670002C61A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 			children = (
 				15AA24F81D61A55700EC03FB /* CXLoginViewController.h */,
 				15AA24F91D61A55700EC03FB /* CXLoginViewController.m */,
+				15AA25041D62AE0400EC03FB /* CXTodolistViewController.h */,
+				15AA25051D62AE0400EC03FB /* CXTodolistViewController.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				15AA24FA1D61A55700EC03FB /* CXLoginViewController.m in Sources */,
 				15CE2E6A1D5B28670002C61A /* AppDelegate.m in Sources */,
 				15CE2E671D5B28670002C61A /* main.m in Sources */,
+				15AA25061D62AE0400EC03FB /* CXTodolistViewController.m in Sources */,
 				15AA25011D61D1E700EC03FB /* MBProgressHUD+XMG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,7 +69,6 @@
                                 <state key="normal" title="login"/>
                                 <connections>
                                     <action selector="login:" destination="SZR-V7-Qc8" eventType="touchUpInside" id="UaS-1s-JzQ"/>
-                                    <segue destination="gbl-Ob-tW7" kind="push" identifier="login2mytodolist" id="rXR-AB-y1d"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAo-d9-UHw">
@@ -146,6 +145,7 @@
                         <outlet property="loginBtn" destination="ead-t6-JY2" id="bif-HE-6HA"/>
                         <outlet property="pwdField" destination="qxQ-iy-ABs" id="mul-mF-fmu"/>
                         <outlet property="rmbPwdSwitch" destination="Si8-Oj-6tB" id="5Xl-lh-DNU"/>
+                        <segue destination="gbl-Ob-tW7" kind="push" identifier="login2mytodolist" id="Pm5-Il-slM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yk-nP-BLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +155,7 @@
         <!--My Todo List-->
         <scene sceneID="Vxw-5j-Oxn">
             <objects>
-                <tableViewController id="gbl-Ob-tW7" sceneMemberID="viewController">
+                <tableViewController id="gbl-Ob-tW7" customClass="CXTodolistViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wca-LF-nR8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Todo List" id="qb6-Eh-h3L">
-                        <barButtonItem key="leftBarButtonItem" title="注销" id="o1R-2D-1ou"/>
+                        <barButtonItem key="leftBarButtonItem" title="注销" id="o1R-2D-1ou">
+                            <connections>
+                                <action selector="logout:" destination="gbl-Ob-tW7" id="yJW-46-eHW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="添加" id="LoN-oz-PXY"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
