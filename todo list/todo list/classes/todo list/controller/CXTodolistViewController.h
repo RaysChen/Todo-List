@@ -10,6 +10,6 @@
 @class CXTodolist;
 @interface CXTodolistViewController : UITableViewController
 
-@property (nonatomic, strong) CXTodolist *todolist;
+
 
 @end

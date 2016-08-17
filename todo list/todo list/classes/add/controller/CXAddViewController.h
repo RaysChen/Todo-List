@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class CXTodolistViewController;
+@class CXAddViewController,CXTodolist;
+@protocol  CXAddViewControllerDelegate <NSObject>
 
+@optional
+- (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)todo;
+
+@end
+
+@class CXTodolistViewController;
 @interface CXAddViewController : UIViewController
 
-@property (nonatomic,strong) CXTodolistViewController *todoVC;
+@property (nonatomic,weak) id<CXAddViewControllerDelegate>delegate;
 
 @end
