@@ -20,7 +20,7 @@
  自动：不需要逻辑判断就跳转
  手动：有逻辑的判断，如登录帐号密码的判断
  
-    四.传值：顺传
+    四.传值：顺传and逆传
  
  数据传值:
  1.接收方一定要有属性接收
@@ -43,9 +43,27 @@
  {
  [super viewDidAppear:animated];
  // 主动弹出姓名文本框
- [_addSthField becomeFirstResponder];
+ [_addSthField becomeFirstResponder]
  }
 
+ 2.实现数据的逆传（把添加控制器的值传递给代办列表控制器）
+ 
+ （1.）创建模型
+ （2.）2控制器的内容包装成模型
+ （3.）在1控制器的头文件中声明接受2控制器模型的属性
+ （4.）在2控制器中把模型值赋给属性  _todoVC.todolist = todo;
+ （5.）在1控制器中
+ //跳转之前的时候调用
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+ 
+ //给添加控制器传递todolist控制器的属性
+ CXAddViewController *addVC = segue.destinationViewController;
+ 
+ addVC.todoVC = self;
+ 
+ }
+
+ 
  
  */
 
