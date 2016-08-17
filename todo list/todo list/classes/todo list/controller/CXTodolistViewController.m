@@ -19,13 +19,14 @@
 - (void)setTodolist:(CXTodolist *)todolist{
 
     _todolist = todolist;
+    NSLog(@"%@", todolist.something);
 }
 
 //跳转之前的时候调用
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
     //给添加控制器传递todolist控制器的属性
-    CXTodolistViewController *addVC = segue.destinationViewController;
+    CXAddViewController *addVC = segue.destinationViewController;
    
     addVC.todoVC = self;
     

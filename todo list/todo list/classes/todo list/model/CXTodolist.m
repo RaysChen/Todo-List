@@ -14,7 +14,9 @@
 {
 
     CXTodolist *todo =[[self alloc]init];
+    
     todo.something = something;
+    
     return todo;
 
 }

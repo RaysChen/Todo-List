@@ -25,6 +25,8 @@
     //0.把文本框的内容包装成Todolist模型
     CXTodolist *todo = [CXTodolist todolistWithsomething:_addSthField.text];
     
+       NSLog(@"%@",_todoVC);
+    
     //1.把todolist传递给控制器
     _todoVC.todolist = todo;
     
