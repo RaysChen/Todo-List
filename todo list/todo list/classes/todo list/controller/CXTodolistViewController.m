@@ -39,6 +39,9 @@
 }
 
 - (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)todo{
+    
+    NSLog(@"%s--%@",__func__,todo.something);
+    
     //把添加界面的模型传递到todo list界面
     //把todosomething模型保存到数组
     [self.todolists addObject:todo];
@@ -97,9 +100,9 @@
     }
     
     // 获取模型
-    CXTodolist *c = self.todolists[indexPath.row];
+    CXTodolist *todo = self.todolists[indexPath.row];
     
-    cell.textLabel.text = c.something;
+    cell.textLabel.text = todo.something;
     
     
     return cell;
