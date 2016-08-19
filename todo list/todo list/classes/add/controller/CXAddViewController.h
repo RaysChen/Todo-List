@@ -12,7 +12,7 @@
 @protocol  CXAddViewControllerDelegate <NSObject>
 
 @optional
-- (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)todo;
+- (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)something;
 
 @end
 

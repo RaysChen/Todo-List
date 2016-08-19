@@ -9,6 +9,7 @@
 #import "CXTodolistViewController.h"
 #import "CXAddViewController.h"
 #import "CXTodolist.h"
+#import "CXTodoListTableViewCell.h"
 
 @interface CXTodolistViewController ()<UIActionSheetDelegate,CXAddViewControllerDelegate>
 
@@ -38,13 +39,14 @@
     
 }
 
-- (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)todo{
+- (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)something{
     
-    NSLog(@"%s--%@",__func__,todo.something);
+    NSLog(@"%s--%@",__func__,something.something);
     
     //把添加界面的模型传递到todo list界面
     //把todosomething模型保存到数组
-    [self.todolists addObject:todo];
+    [self.todolists addObject:something];
+  
     
     //刷新表格
     [self.tableView reloadData];
@@ -83,27 +85,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return self.todolists.count;
+    return 1;
+    
 }
 
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.todolists.count;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // 创建标示符
-    static NSString *ID = @"cell";
+    static NSString *ID = @"CXTodoListTableViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
-    }
+    CXTodoListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     
     // 获取模型
     CXTodolist *todo = self.todolists[indexPath.row];
-    
-    cell.textLabel.text = todo.something;
-    
+    [cell loadData:todo];
     
     return cell;
 }
