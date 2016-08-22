@@ -10,7 +10,7 @@
 
 @interface CXEditViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *editField;
-@property (weak, nonatomic) IBOutlet UIButton *editBtn;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 
 @end
 
@@ -18,22 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //设置导航栏的标题
+    self.title = @"Edit Something";
+    //设置导航栏右边的按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(edit:)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+- (void)edit:(UIBarButtonItem *)item{}
 
 @end

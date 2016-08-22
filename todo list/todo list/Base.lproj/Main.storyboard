@@ -204,13 +204,39 @@
                     <view key="view" contentMode="scaleToFill" id="Eql-Ct-uMa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oen-LC-7Cv">
+                                <rect key="frame" x="20" y="119" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="w5n-s3-pfe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmr-QS-1Kx">
+                                <rect key="frame" x="165" y="197" width="55" height="30"/>
+                                <state key="normal" title="save"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xmr-QS-1Kx" secondAttribute="trailing" constant="155" id="Djf-Ph-Buk"/>
+                            <constraint firstItem="oen-LC-7Cv" firstAttribute="top" secondItem="Wnf-qT-l10" secondAttribute="bottom" constant="99" id="G6H-fQ-vPR"/>
+                            <constraint firstItem="oen-LC-7Cv" firstAttribute="leading" secondItem="Eql-Ct-uMa" secondAttribute="leading" constant="20" id="hjT-4l-W7y"/>
+                            <constraint firstAttribute="trailing" secondItem="oen-LC-7Cv" secondAttribute="trailing" constant="20" id="iWn-cx-YmW"/>
+                            <constraint firstItem="Xmr-QS-1Kx" firstAttribute="leading" secondItem="Eql-Ct-uMa" secondAttribute="leading" constant="165" id="s1g-m8-Mah"/>
+                            <constraint firstItem="Xmr-QS-1Kx" firstAttribute="top" secondItem="oen-LC-7Cv" secondAttribute="bottom" constant="38" id="y5F-On-vKd"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="editField" destination="oen-LC-7Cv" id="Q83-by-mcd"/>
+                        <outlet property="saveBtn" destination="Xmr-QS-1Kx" id="NS2-ZT-caK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAa-ae-hPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4270" y="-182"/>
+            <point key="canvasLocation" x="-4342.5" y="-165.5"/>
         </scene>
         <!--Add Something-->
         <scene sceneID="nOF-SA-Yda">
