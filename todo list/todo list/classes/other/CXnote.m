@@ -67,5 +67,24 @@
  4.将传递的数据显示在tableview
  
  
+ 
+   六.点击cell跳到编辑页面
+ 1.使用代码＋storyboard
+
+ #pragma mark - tableView代理方法 ＋给CXEditViewController绑定Identifier:@"edit"
+ //点击cell时候调用
+ - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     // 加载storyboard
+ UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    // 创建编辑控制器
+ CXEditViewController *editVc = [storyboard instantiateViewControllerWithIdentifier:@"edit"];
+   // 跳转到编辑界面
+ [self.navigationController pushViewController:editVc animated:YES];
+ 
+ }
+
+ 
+ 
+ 
  */
 
