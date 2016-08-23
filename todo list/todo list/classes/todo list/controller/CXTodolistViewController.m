@@ -122,6 +122,8 @@
     // 创建编辑控制器
     CXEditViewController *editVc = [storyboard instantiateViewControllerWithIdentifier:@"edit"];
     
+    editVc.todolist = self.todolists[indexPath.row];
+    
     
     
     // 跳转到编辑界面

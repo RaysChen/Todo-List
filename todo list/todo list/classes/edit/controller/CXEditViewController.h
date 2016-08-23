@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CXTodolist;
 
 @interface CXEditViewController : UIViewController
 
+@property (nonatomic, strong)CXTodolist *todolist;
 @end
