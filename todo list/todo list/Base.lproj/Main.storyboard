@@ -213,7 +213,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmr-QS-1Kx">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmr-QS-1Kx">
                                 <rect key="frame" x="165" y="197" width="55" height="30"/>
                                 <state key="normal" title="save"/>
                             </button>
@@ -241,7 +241,6 @@
         <!--Add Something-->
         <scene sceneID="nOF-SA-Yda">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ieg-g8-ivl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jo5-Iz-g5c" customClass="CXAddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aDX-c0-7wb"/>
@@ -285,6 +284,7 @@
                         <outlet property="addSthField" destination="BC1-v8-yvC" id="bOC-Ls-0Ie"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieg-g8-ivl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4275.5" y="-938.5"/>
         </scene>
