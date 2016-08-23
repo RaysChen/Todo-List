@@ -216,6 +216,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmr-QS-1Kx">
                                 <rect key="frame" x="165" y="197" width="55" height="30"/>
                                 <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="save:" destination="JSo-LQ-IOX" eventType="touchUpInside" id="EWX-jC-imc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

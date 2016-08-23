@@ -17,6 +17,25 @@
 
 @implementation CXEditViewController
 
+//点击save的时候调用
+- (IBAction)save:(id)sender {
+    
+    //修改模型数据
+    _todolist.something = _editField.text;
+    
+    
+    //把模型逆传，刷新表格,用block
+    if (_block) {
+      
+        _block();
+    }
+    
+
+//返回上一个控制器
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -35,7 +54,7 @@
     //保存按钮是否可点击
     [self textChange];
     
-    //文本框不能点击
+    //文本框不能编辑修改
     _editField.enabled = NO;
 
     

@@ -123,6 +123,11 @@
     CXEditViewController *editVc = [storyboard instantiateViewControllerWithIdentifier:@"edit"];
     
     editVc.todolist = self.todolists[indexPath.row];
+    editVc.block = ^(){
+    //刷新表格
+        [self.tableView reloadData];
+    
+    };
     
     
     
