@@ -35,6 +35,10 @@
     //保存按钮是否可点击
     [self textChange];
     
+    //文本框不能点击
+    _editField.enabled = NO;
+
+    
 }
 
 //文本框内容改变时会调用
@@ -70,6 +74,9 @@
         
         //让文本框不允许编辑
         _editField.enabled = NO;
+        
+        //还原修改的数据
+        _editField.text = _todolist.something;
     }
     
     
