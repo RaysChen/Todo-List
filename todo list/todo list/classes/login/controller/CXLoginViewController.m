@@ -20,16 +20,51 @@
 
 @implementation CXLoginViewController
 
+#define CXUserDefaults [NSUserDefaults standardUserDefaults]
+static NSString *accountKey = @"account";
+static NSString *pwdKey = @"pwd";
+static NSString *rmbKey = @"rmd";
+static NSString *loginKey = @"login";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //读取数据
+    
+//取出数据
+    NSString *account = [CXUserDefaults objectForKey:accountKey];
+    NSString *pwd = [CXUserDefaults objectForKey:pwdKey];
+    BOOL rmb = [CXUserDefaults boolForKey:rmbKey];
+    BOOL login = [CXUserDefaults boolForKey:loginKey];
+
+//赋值
+    _accountField.text = account;
+    
+    if (rmb == YES) {
+        _pwdField.text = pwd;
+    }
+    
+    _rmbPwdSwitch.on = rmb;
+    _autoLoginSwitch.on = login;
+    
+    // 勾选自动登录
+    if (login == YES) {
+        
+        [self login:nil];
+        
+    }
+    
+
     
 //给文本框添加监听器，监听文本框输入内容的及时改变
     [_accountField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
     [_pwdField addTarget:self action:@selector(textChange)forControlEvents:UIControlEventEditingChanged];
     
-    
+
+    //判断登录按钮是否能点击
+    [self textChange];
 }
+
 
 - (void)textChange{
     
@@ -60,6 +95,12 @@
         
         //验证账号密码是否符合
         if ([_accountField.text isEqualToString:@"cx"]&&[_pwdField.text isEqualToString:@"123"]) {
+            
+            //输入正确，数据存储
+            [CXUserDefaults setObject:_accountField.text forKey:accountKey];
+            [CXUserDefaults setObject:_pwdField.text forKey:pwdKey];
+            [CXUserDefaults setBool:_rmbPwdSwitch.on forKey:rmbKey];
+            [CXUserDefaults setBool:_autoLoginSwitch.on forKey:loginKey];
             
             //输入正确直接跳转到my todo list页面
             [self performSegueWithIdentifier:@"login2mytodolist" sender:nil];
