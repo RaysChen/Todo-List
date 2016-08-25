@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CXTodolist : NSObject
+@interface CXTodolist : NSObject<NSCoding>
+
 
 @property (nonatomic, strong)NSString *something;
 

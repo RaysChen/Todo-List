@@ -10,6 +10,26 @@
 
 @implementation CXTodolist
 
+static NSString *somgthingKey = @"something";
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+
+
+
+    [aCoder encodeObject:_something forKey:somgthingKey];
+
+}
+- (id)initWithCoder:(NSCoder *)aDecoder{
+
+    if (self = [super init]) {
+        _something = [aDecoder decodeObjectForKey:somgthingKey];
+    }
+
+    return self;
+
+}
+
+
 + (instancetype)todolistWithsomething:(NSString*)something
 {
 

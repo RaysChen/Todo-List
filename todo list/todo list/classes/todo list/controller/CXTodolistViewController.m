@@ -12,6 +12,9 @@
 #import "CXTodoListTableViewCell.h"
 #import "CXEditViewController.h"
 
+
+#define CXFilePath  [ NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"todolist.data"]
+
 @interface CXTodolistViewController ()<UIActionSheetDelegate,CXAddViewControllerDelegate>
 
 @property (nonatomic,strong)NSMutableArray *todolists;
@@ -23,7 +26,12 @@
 
 - (NSMutableArray *)todolists{
     if (_todolists == nil) {
-        _todolists = [NSMutableArray array];
+        _todolists = [NSKeyedUnarchiver unarchiveObjectWithFile:CXFilePath];
+        
+        //判断有没有读取数据
+        if (_todolists == nil) {
+            _todolists = [NSMutableArray array];
+        }
     }
     return _todolists;
 }
@@ -40,17 +48,21 @@
     
 }
 
+//把添加界面的模型传递到todo list界面
 - (void)addViewController:(CXAddViewController *)addVc didClickAddBtnWithTodolist:(CXTodolist *)something{
     
     NSLog(@"%s--%@",__func__,something.something);
     
-    //把添加界面的模型传递到todo list界面
+   
     //把todosomething模型保存到数组
     [self.todolists addObject:something];
   
     
     //刷新表格
     [self.tableView reloadData];
+    
+    //存储数据
+    [NSKeyedArchiver archiveRootObject:self toFile:CXFilePath];
 }
 
 
@@ -123,9 +135,13 @@
     CXEditViewController *editVc = [storyboard instantiateViewControllerWithIdentifier:@"edit"];
     
     editVc.todolist = self.todolists[indexPath.row];
+    
+    //点编辑时调用的block
     editVc.block = ^(){
     //刷新表格
         [self.tableView reloadData];
+    //存储数据
+        [NSKeyedArchiver archiveRootObject:self toFile:CXFilePath];
     
     };
     
